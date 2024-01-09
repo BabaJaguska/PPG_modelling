@@ -1,6 +1,9 @@
 # Use an official Python runtime as the base image
 FROM python:3.9
 
+# Label the image to link back to the repository
+LABEL org.opencontainers.image.source="https://github.com/babajaguska/ppg_modelling"
+
 # Set the working directory in the container
 WORKDIR /app
 
