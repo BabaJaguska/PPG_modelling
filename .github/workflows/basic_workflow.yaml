@@ -36,7 +36,7 @@ jobs:
         run: pytest tests/
 
       - name: build docker image
-        run: docker build -t ppg:latest .
+        run: docker build -t ghcr.io/BabaJaguska/PPG_modelling/ppg:latest .
 
       - name: authenticate with ghcr.io
         uses: docker/login-action@v2
@@ -46,7 +46,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: push docker image
-        run: docker push ghcr.io/username/ppg:latest
+        run: docker push ghcr.io/BabaJaguska/PPG_modelling/ppg:latest
 
 
 
